@@ -1,0 +1,84 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="hero">
+    <div class="container">
+        <div class="hero-logo">
+            <h1>
+                <b>Staff Point<br/></b>
+                Услуги мерчандайзинга<br/>
+                {{ region.insert if region}}
+            </h1>
+        </div>
+
+        <div class="numbers-group">
+
+            <div class="number-el">
+                <div class="number-title">20+</div>
+                <div class="number-subtitle">лет</div>
+                <div class="number-text">на рынке меренданайзинга</div>
+            </div>
+            <div class="number-el">
+                <div class="number-title">350+</div>
+                <div class="number-subtitle">городов</div>
+                <div class="number-text">на обслуживании</div>
+            </div>
+            <div class="number-el">
+                <div class="number-title">30 000+</div>
+                <div class="number-subtitle">торговых точек</div>
+                <div class="number-text">на обслуживании ежедневно</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="hero-video-dimmer"></div>
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="/static/background.mp4" type="video/mp4">
+    </video>
+</div>
+
+
+
+<section class="numbers">
+    <div class="container">
+        <div class="numbers-group">
+            <div class="number-el">
+                <div class="number-title">20+</div>
+                <div class="number-subtitle">лет</div>
+                <div class="number-text">на рынке меренданайзинга</div>
+            </div>
+            <div class="number-el">
+                <div class="number-title">350+</div>
+                <div class="number-subtitle">городов</div>
+                <div class="number-text">на обслуживании</div>
+            </div>
+            <div class="number-el">
+                <div class="number-title">30 000+</div>
+                <div class="number-subtitle">торговых точек</div>
+                <div class="number-text">на обслуживании ежедневно</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<div class="container">
+
+    <h1>Эта страница услуг {{ region.insert if region }}</h1>
+
+    <div class="service">
+        <a href="{{ url_for_service('merch', region) }}">
+            <p>Услуги мерчандайзинга {{ region.insert if region }}</p>
+        </a>
+    </div>
+
+    <div class="service">
+        <a href="{{ url_for_service('outsource', region) }}">
+            <p>Услуги аутсорсинга {{ region.insert if region }}</p>
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}
