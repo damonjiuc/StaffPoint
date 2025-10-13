@@ -1,19 +1,30 @@
+{% set sorted_regions = regions.values() | sort(attribute='name') %}
+{% set total = sorted_regions | length %}
+{% set half = (total // 2) + (total % 2) %}
+{% set reg1 = sorted_regions[:half] %}
+{% set reg2 = sorted_regions[half:] %}
+
 <div class="container">
-    <h3>География присутствия</h3>
+    <h2>География присутствия</h2>
     <div class="footer-map">
 
-        <ul>
-        {% for slug, r in regions.items() %}
-            <li>
-                <a href="{{ url_for_service('', r) }}">{{ r.name }}</a>
-            </li>
+        <ul class="footer-map-reg1">
+        {% for r in reg1 %}
+            <li><a href="{{ url_for_service('', r) }}">{{ r.name }}</a></li>
         {% endfor %}
         </ul>
-        <img src="/static/map.png" alt="map" title="map">
+
+        <img class="footer-map-img" src="/static/map.png" alt="Карта географии присутствия" title="Карта географии присутствия">
+
+        <ul class="footer-map-reg2">
+        {% for r in reg2 %}
+            <li><a href="{{ url_for_service('', r) }}">{{ r.name }}</a></li>
+        {% endfor %}
+        </ul>
     </div>
     <div class="footer-top">
         <div class="footer-left">
-            <h2 class="footer-title">Рекламное агентство Staff Point</h2>
+            <h3 class="footer-title">Рекламное агентство Staff Point</h3>
             <address>
                 197343, Россия, Санкт-Петербург, Торжковская&nbsp;ул.&nbsp;д.20&nbsp;лит.А<br />
                 БЦ&nbsp;Торжковский&nbsp;Лофт, офис&nbsp;291

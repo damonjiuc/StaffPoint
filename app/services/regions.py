@@ -1,12 +1,5 @@
 from fastapi import HTTPException
-
-
-regions = {
-    "spb": {"slug": "spb", "name": "Санкт-Петербург", "insert": "в Санкт-Петербурге"},
-    "msk": {"slug": "msk", "name": "Москва", "insert": "в Москве"},
-    "krr": {"slug": "krr", "name": "Краснодар", "insert": "в Краснодаре"},
-    "anapa": {"slug": "anapa", "name": "Анапа", "insert": "в Анапе"},
-}
+from app.config import regions
 
 
 def get_region(region_slug: str | None):
