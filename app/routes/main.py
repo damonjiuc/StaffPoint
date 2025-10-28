@@ -26,31 +26,6 @@ async def index_page(request: Request):
     })
 
 
-@main_router.get('/merch/', response_class=HTMLResponse)
-@main_router.get('/{region_slug}/merch/', response_class=HTMLResponse)
-async def index_page(request: Request, region_slug: str | None = None):
-    region = get_region(region_slug)
-    print("region resolved:", region)
-    return templates.TemplateResponse('merch.html', {
-        'request': request,
-        'region': region,
-        'regions': regions,
-        'url_for_service' : url_for_service
-    })
-
-
-@main_router.get('/outsource/', response_class=HTMLResponse)
-@main_router.get('/{region_slug}/outsource/', response_class=HTMLResponse)
-async def index_page(request: Request, region_slug: str | None = None):
-    region = get_region(region_slug)
-    return templates.TemplateResponse('outsource.html', {
-        'request': request,
-        'region': region,
-        'regions': regions,
-        'url_for_service' : url_for_service
-    })
-
-
 @main_router.get('/{region_slug}/', response_class=HTMLResponse)
 async def index_page_region(request: Request, region_slug: str | None = None):
     region = get_region(region_slug)

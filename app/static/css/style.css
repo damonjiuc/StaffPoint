@@ -23,23 +23,28 @@ h2 {
 }
 
 h3 {
-    font-size: 30px;
-    font-weight: bold;
-    line-height: 1.2em;
-    margin-bottom: 26px;
-}
-
-h4 {
     font-size: 24px;
     font-weight: bold;
     line-height: 1.2em;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin-bottom: 10px;
 }
 
 .section-title {
     margin-top: 32px;
     color: var(--dark);
     text-align: center;
+}
+
+.section-subtitle {
+    margin-bottom: 16px;
+    font-size: 18px;
 }
 
 /* menu */
@@ -394,6 +399,8 @@ main {
 
 .services-el {
     display: block;
+    position: relative;
+    overflow: hidden;
     width: 32%;
     height: 172px;
     color: var(--dark);
@@ -402,110 +409,154 @@ main {
     border-radius: 8px;
 }
 
+.services-el::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 170px;
+    filter: grayscale(600%);
+    opacity: 0.8;
+    transition: filter 0.5s ease, opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.services-el:hover::after {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
 .services-el h3 {
     font-size: 20px;
 }
 
-#services-el-retail {
-    background: url("../img_services/shop-1.jpg") no-repeat;
-    background-size: cover;
-}
-
-#services-el-beauty {
-    background: url("../img_services/merch-beauty.jpg") no-repeat;
-    background-size: cover;
-}
-
+/* === ОСНОВНЫЕ УСЛУГИ (Мерчандайзинг) === */
+#services-el-retail,
+#services-el-beauty,
+#services-el-diy,
 #services-el-meds {
-    background: url("../img_services/merch-meds.jpg") no-repeat;
-    background-size: cover;
+    background: #f7e4d9;
 }
 
-#services-el-tech {
-    background-size: cover;
-}
-
-#services-el-placement {
-    background-size: cover;
-}
-
-#services-el-learning {
-    background: url("../img_services/learning-2.jpg") no-repeat;
-    background-size: cover;
-}
-
-#services-el-audit {
-    background: url("../img_services/ppl-1.jpg") no-repeat;
-    background-size: cover;
-}
-
-#services-el-retail-audit {
-    background: url("../img_services/shop-2.jpg") no-repeat;
-    background-size: cover;
-}
-
+/* === АУДИТ и КОНТРОЛЬ === */
+#services-el-audit,
+#services-el-retail-audit,
 #services-el-mystery {
-    background: url("../img_services/shop-3.jpg") no-repeat;
-    background-size: cover;
+    background: #ebe9fd;
 }
 
+/* === ПЕРСОНАЛ и ПРОДАЖИ === */
+#services-el-learning,
+#services-el-outsource-staff,
 #services-el-outsource-sales {
-    background: url("../img_services/learning-1.jpg") no-repeat;
-    background-size: cover;
+    background: #fff8e1;
 }
 
-#services-el-outsource-staff {
-    background: url("../img_services/ppl-2.jpg") no-repeat;
-    background-size: cover;
+/* === ОБОРУДОВАНИЕ === */
+#services-el-tech,
+#services-el-placement {
+    background: #e8eaf6;
 }
 
-.advantages {
-    background-color: var(--light);
-    padding-top: 36px;
-    padding-bottom: 72px;
-    margin-bottom: 200px;
+#services-el-retail::after {
+    background: url("../img_services/shop-nobg.png") no-repeat bottom right;
+    background-size: contain;
 }
 
-.advantages h2, .advantages h4 {
-    color: var(--accent);
-    text-transform: uppercase;
+#services-el-beauty::after {
+    background: url("../img_services/merch-beauty-nobg.png") no-repeat bottom right;
+    background-size: contain;
 }
 
-.advantages h3 {
-    margin-top: -24px;
-    margin-bottom: 36px;
-    color: var(--dark);
-    text-transform: uppercase;
-    text-align: center;
+#services-el-audit::after {
+    background: url("../img_services/audit-nobg.png") no-repeat bottom right;
+    background-size: contain;
 }
 
-.advantages-list {
+#services-el-retail-audit::after {
+    background: url("../img_services/ppl-1-nobg.png") no-repeat bottom right;
+    background-size: contain;
+}
+
+#services-el-mystery::after {
+    background: url("../img_services/mystery-nobg.png") no-repeat bottom right;
+    background-size: contain;
+}
+
+#services-el-outsource-staff::after {
+    background: url("../img_services/ppl-2-nobg.png") no-repeat bottom right;
+    background-size: contain;
+}
+
+#services-el-learning::after {
+    width: 150px;
+    background: url("../img_services/learn-nobg.png") no-repeat;
+    background-size: contain;
+}
+
+#services-el-diy::after {
+    background: url("../img_services/diy-nobg.png") no-repeat bottom right;
+    background-size: contain;
+}
+
+#services-el-tech::after {
+    background: url("../img_services/merch-tech.png") no-repeat bottom right;
+    background-size: contain;
+    right: 20px;
+}
+
+#services-el-placement::after {
+    background: url("../img_services/posm.png") no-repeat bottom right;
+    background-size: contain;
+    height: 150px;
+}
+
+#services-el-meds::after {
+    background: url("../img_services/meds-nobg.png") no-repeat bottom right;
+    background-size: contain;
+}
+
+#services-el-outsource-sales::after  {
+    background: url("../img_services/sales-nobg.png") no-repeat bottom right;
+    background-size: contain;
+}
+/* adv-icons */
+
+.adv-icons {
+    margin-top: 32px;
+}
+
+.adv-icons-list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.adv-el {
-    width: 42%;
-    position: relative;
-    padding-left: 100px;
-    padding-right: 20px;
-    margin-bottom: 40px;
-}
-
-.adv-el::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 4px;
-    width: 60px;
-    height: 60px;
-    background: url('../list-icon.png') no-repeat center / contain;
-}
-
-.adv-txt {
+.adv-icons-el {
+    display: block;
+    margin-bottom: 24px;
+    width: 32%;
+    padding: 16px;
+    transition: .2s ease-in-out;
+    border: 2px solid var(--medium);
+    cursor: pointer;
     color: var(--dark);
+}
+
+.adv-icons-el:hover {
+    border: 2px solid var(--accent);
+    color: var(--black);
+}
+
+.adv-icons-el img {
+    max-width: 64px;
+}
+
+.adv-icons-title {
+    margin: 10px 0;
     font-size: 18px;
+    font-weight: bold;
 }
 
 /* end index */

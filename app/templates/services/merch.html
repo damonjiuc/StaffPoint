@@ -1,0 +1,171 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" lang="ru" content="Мерчандайзинг товаров в магазинах {{ region.insert if region }} от Staff Point. Профессиональная выкладка, фотоотчёты, контроль и аналитика продаж. 20+ лет опыта и более 350 городов обслуживания!" />
+    <meta name="keywords" content="мерчандайзинг {{ region.insert if region }}, мерчандайзинг товаров {{ region.insert if region }}, услуги мерчандайзинга, выкладка товаров {{ region.insert if region }}, Staff Point" />
+    <title>Мерчандайзинг товаров в магазинах {{ region.insert if region }} — Staff Point</title>
+{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="container">
+        <div class="hero-title">
+            <h1>
+                <b>Staff Point<br/></b>
+                Услуги мерчандайзинга товаров в магазинах<br/>
+                {{ region.insert if region}}
+            </h1>
+        </div>
+        <div class="hero-txt">
+            <p>
+                Без грамотного представления даже лучший продукт теряет шанс быть замеченным. Мы помогаем увеличить продажи за счёт
+                правильной презентации бренда на полке, поддержания стандартов и дисциплины в торговых точках.
+            </p>
+            <p><b>Эффективная выкладка — ваши продажи в действии.</b></p>
+            <p>
+                Мы помогаем брендам занимать лучшие позиции на полках и привлекать внимание покупателей. Мерчандайзинг
+                в магазинах направлен на то, чтобы каждый товар был представлен правильно, а ваш бренд — заметен и узнаваем.
+            </p>
+        </div>
+    </div>
+    <div class="hero-video-dimmer"></div>
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="/static/background.mp4" type="video/mp4">
+    </video>
+</div>
+
+<section class="adv-icons">
+    <div class="container">
+        <h2>Мы знаем о мерчендайзинге все!</h2>
+        <div class="section-subtitle">До того, как мы <b>подберем</b> для Вас <b>подходящую программу мерчендайзинга</b>, Мы <b>ответим на</b> Ваши самые <b>главные вопросы</b></div>
+        <ul class="adv-icons-list">
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_merch_what.png" alt="" title="">
+                <h4 class="adv-icons-title"></h4>
+                <div class="adv-icons-txt">Какие магазины определить в программу по мерчендайзингу</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_merch_eff.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">Мерчендайзинг имеет отложенный эффект, как посчитать его эффективность</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_merch_merch.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">Сколько дополнительной прибыли принес компании мерчендайзер</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_merch_gain.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">Окупается ли проект в «целом»</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_merch_spots.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">Как повысить эффективность проекта и стоит ли запускать новые торговые точки</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_merch_spots.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">Как повысить эффективность проекта и стоит ли запускать новые торговые точки</div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="service-comp">
+    <div class="container">
+        <h2>Что входит в услугу мерчандайзинга в магазинах {{ region.insert if region }}</h2>
+        <div class="section-subtitle">Мы <b>берем на себя все</b> что касается Вашего представления в торговых точках</div>
+        <div class="service-comp-wrap">
+            <ul class="service-comp-list">
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Подбор и обучение персонала</h4>
+                    <div class="service-comp-txt">Мы подбираем Вам персонал, обучаем его оптимальному использованию пространства, управлению выкладкой товара, предоставлению информации о продуктах для повышения продаж.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Организация выкладки товара с фотоотчетом</h4>
+                    <div class="service-comp-txt">Расстановка товаров на полках, создание эффективной композиции и управление их представлением в точках продажи.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Координация с персоналом торговой точки</h4>
+                    <div class="service-comp-txt">Мерчандайзеры работают в тесном взаимодействии с персоналом торговых точек. Они эффективно коммуницируют с сотрудниками разного уровня.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Предоставление информации о наличии товара</h4>
+                    <div class="service-comp-txt">Мерчандайзеры предоставляют данные о товарных запасах в торговых точках. Это помогает контролировать ситуацию и избегать нехватки или излишков товара.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Совместный мониторинг и анализ результатов</h4>
+                    <div class="service-comp-txt">Совместно мы анализируем данные из программного обеспечения, оцениваем эффективность проведенных мероприятий и вносим необходимые коррективы для повышения результативности.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Клиентский сервис 24/7</h4>
+                    <div class="service-comp-txt">В Вашем распоряжение будет персональный менеджер и другие сотрудники нашей системы управления проектами от регионального координатора до директора по мерчандайзингу</div>
+                </li>
+            </ul>
+            <div class="service-comp-img"></div>
+        </div>
+    </div>
+</section>
+
+<section class="adv-icons">
+    <div class="container">
+        <h2>В чем наша уникальность?</h2>
+        <ul class="adv-icons-list">
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_merch_what.png" alt="" title="">
+                <h4 class="adv-icons-title">Электронная отчетность</h4>
+                <div class="adv-icons-txt">Бесплатная, гибкая и защищённая система с фильтрами, чатом и интеграцией под ваши задачи</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_merch_eff.png" alt="" title="">
+                <div class="adv-icons-title">Собственные специалисты</div>
+                <div class="adv-icons-txt">Работаем только своей командой — без подрядчиков, задержек и потери качества</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_merch_gain.png" alt="" title="">
+                <div class="adv-icons-title">Отлаженное управление</div>
+                <div class="adv-icons-txt">Каждый проект под личным контролем руководства и выделенного менеджера 24/7</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_merch_spots.png" alt="" title="">
+                <div class="adv-icons-title">20+ лет опыта</div>
+                <div class="adv-icons-txt">Федеральные проекты, все торговые сети России и сотни успешно реализованных брендов</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_merch_spots.png" alt="" title="">
+                <div class="adv-icons-title">Безупречная репутация</div>
+                <div class="adv-icons-txt">Придерживаемся высоких стандартов сервиса, строим долгосрочные партнёрства</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_merch_merch.png" alt="" title="">
+                <div class="adv-icons-title">Быстрая коммуникация</div>
+                <div class="adv-icons-txt">Мгновенно решаем задачи через рабочий чат и прямую связь без посредников</div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="grid-nets">
+    <div class="container">
+        <h2>Сети в которых мы уже работаем</h2>
+        <div class="grid-nets-wrap">
+            <div class="grid-nets-el"><img src="/static/nets_logos/ashan.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-diksi.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-magnit.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-okey.jpg" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-perekrestok.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-pyatyorochka.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/roznitsa-metro.jpg" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/lenta_logo.png" alt=""></div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

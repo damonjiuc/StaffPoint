@@ -1,0 +1,110 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" lang="ru" content="Мерчандайзинг товаров в магазинах {{ region.insert if region }} от Staff Point. Профессиональная выкладка, фотоотчёты, контроль и аналитика продаж. 20+ лет опыта и более 350 городов обслуживания!" />
+    <meta name="keywords" content="мерчандайзинг {{ region.insert if region }}, мерчандайзинг товаров {{ region.insert if region }}, услуги мерчандайзинга, выкладка товаров {{ region.insert if region }}, Staff Point" />
+    <title>Мерчандайзинг DIY {{ region.insert if region }} — Staff Point</title>
+{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="container">
+        <div class="hero-title">
+            <h1>
+                <b>Staff Point<br/></b>
+                Услуги мерчандайзинга DIY<br/>
+                {{ region.insert if region}}
+            </h1>
+        </div>
+        <div class="hero-txt">
+            <p>
+                Без грамотного представления даже лучший продукт теряет шанс быть замеченным. Мы помогаем увеличить продажи за счёт
+                правильной презентации бренда на полке, поддержания стандартов и дисциплины в торговых точках.
+            </p>
+            <p><b>Эффективная выкладка — ваши продажи в действии.</b></p>
+            <p>
+                Мы помогаем брендам занимать лучшие позиции на полках и привлекать внимание покупателей. Мерчандайзинг
+                в магазинах направлен на то, чтобы каждый товар был представлен правильно, а ваш бренд — заметен и узнаваем.
+            </p>
+        </div>
+    </div>
+    <div class="hero-video-dimmer"></div>
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="/static/background.mp4" type="video/mp4">
+    </video>
+</div>
+
+<section class="adv-icons">
+    <div class="container">
+        <h2>Мы знаем о мерчендайзинге все!</h2>
+        <div class="section-subtitle">До того, как мы <b>подберем</b> для Вас <b>подходящую программу мерчендайзинга</b>, Мы <b>ответим на</b> Ваши самые <b>главные вопросы</b></div>
+        <ul class="adv-icons-list">
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_merch_what.png" alt="" title="">
+                <h4 class="adv-icons-title"></h4>
+                <div class="adv-icons-txt">Какие магазины определить в программу по мерчендайзингу</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_merch_eff.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">Мерчендайзинг имеет отложенный эффект, как посчитать его эффективность</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_merch_merch.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">Сколько дополнительной прибыли принес компании мерчендайзер</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_merch_gain.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">Окупается ли проект в «целом»</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_merch_spots.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">Как повысить эффективность проекта и стоит ли запускать новые торговые точки</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_merch_spots.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">Как повысить эффективность проекта и стоит ли запускать новые торговые точки</div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="grid-nets">
+    <div class="grid-nets-wrap grid-wrap-6">
+        <div class="grid-nets-el"><img src="/static/nets_logos/ashan.png" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/logo-diksi.png" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/logo-magnit.png" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/logo-okey.jpg" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/logo-perekrestok.png" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/logo-pyatyorochka.png" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/roznitsa-metro.jpg" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/lenta_logo.png" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/atak-logo.png" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/vernij.png" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/globus.png" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/spar.png" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/lemana.png" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/Detskij-mir.jpg" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/kari.png" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/4lapy.jpg" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/bethowen.svg" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/leonardo.png" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/beauty/rg.png" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/beauty/letual.png" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/beauty/zya.png" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/beauty/mc.webp" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/beauty/podruzhka.png" alt=""></div>
+        <div class="grid-nets-el"><img src="/static/nets_logos/beauty/raduga.svg" alt=""></div>
+    </div>
+
+</section>
+
+{% endblock %}
